@@ -2,11 +2,9 @@ package com.jojjenator.recyclerview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import org.w3c.dom.Text
+
 
 class MainActivity : AppCompatActivity() {
 
