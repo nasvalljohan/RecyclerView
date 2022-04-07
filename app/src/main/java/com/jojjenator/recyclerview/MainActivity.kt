@@ -2,7 +2,6 @@ package com.jojjenator.recyclerview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -23,12 +22,12 @@ class MainActivity : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(applicationContext)
 
         searchView.setOnQueryTextListener(object: androidx.appcompat.widget.SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String?): Boolean {
+            override fun onQueryTextSubmit(p0: String?): Boolean {
                 return false
             }
 
-            override fun onQueryTextChange(newText: String?): Boolean {
-                customAdapter.getFilter().filter(newText)
+            override fun onQueryTextChange(p0: String?): Boolean {
+                customAdapter.getFilter().filter(p0)
                 return false
             }
         })
@@ -51,9 +50,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun prepareItems(){
-        for (index in 0..20){
-            itemsList.add("Apples$index")
-        }
+        itemsList.add("Apples")
+        itemsList.add("Johan")
+        itemsList.add("Peter")
+        itemsList.add("Adam")
+        itemsList.add("Andreas")
+        itemsList.add("Oskar")
+        itemsList.add("Jakob")
+        itemsList.add("Gabriel")
+        itemsList.add("Tjena")
+
         customAdapter.notifyDataSetChanged()
     }
 }
